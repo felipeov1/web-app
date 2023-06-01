@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "keyboard",
+        "color": "white"
+    },
+    {
+        "id": 2,
+        "name": "mouse",
+        "color": "black"
+    },
+    {
+        "id": 3,
+        "name": "mousepad",
+        "color": "silver"
+    },
+    {
+        "id": 4,
+        "name": "soundbar",
+        "color": "red"
+    }
+]
+
+
