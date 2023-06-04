@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td width="200" aling="center">ID</td>
+            <td width="200" aling="center">NAME</td>
+            <td width="200" aling="center">COLOR</td>
+        </tr>
+        <% for(let i = 0; i < search.length; i++) { %>
+        <tr>
+            <td width="200">,<%= search[i].id %></td>
+            <td width="200"><%= search[i].name %></td>
+            <td width="200"><%= search[i].color %></td>
+        </tr>
+        <% } %>
+        </table>
+</body>
+</html>

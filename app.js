@@ -1,8 +1,11 @@
 const express = require('express');
 const app  = express();
 
-const data = require('./db/products')
+app.use(express.json());
 
+const routes = require('./routes/get')
+
+app.use('/', routes)
 
 app.set('view engine', 'ejs');
 app.set('views', './views/pages');
@@ -10,17 +13,10 @@ app.set('views', './views/pages');
 app.use(express.static('public'));
 
 
-app.get('/home', (req, res) => {
-    res.render('home')
-})
-
-app.get('/product', (req, res) =>{
-    res.render('product', {data})
-})
-
 app.listen(3000, () =>{
-    console.log(data)
+    console.log(`Server running on http://localhost:3000/home`)
 })
+
 
 
 
