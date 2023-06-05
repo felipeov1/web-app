@@ -2,22 +2,26 @@
     {
         "id": 1,
         "name": "keyboard",
-        "color": "white"
+        "color": "white",
+        "price": 250
     },
     {
         "id": 2,
         "name": "mouse",
-        "color": "black"
+        "color": "black",
+        "price": 180
     },
     {
         "id": 3,
         "name": "mousepad",
-        "color": "silver"
+        "color": "silver",
+        "price": 80
     },
     {
         "id": 4,
         "name": "soundbar",
-        "color": "red"
+        "color": "red",
+        "price": 375
     }
 ]
 
