@@ -1,11 +1,14 @@
 const express = require('express');
 const app  = express();
 
+app.use(express.json({extended: true}))
 app.use(express.json());
 
 const routes = require('./routes/get')
+const routes_1 = require('./routes/post')
 
-app.use('/', routes)
+
+app.use(routes, routes_1)
 
 app.set('view engine', 'ejs');
 app.set('views', './views/pages');
