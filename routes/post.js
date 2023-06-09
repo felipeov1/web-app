@@ -13,15 +13,6 @@ const writeFile = (data) => {
     const updateFile = JSON.stringify(data)
     fs.writeFileSync('./routes/db/products.json', updateFile, 'utf-8')
 
-}
+router.post
 
-routes.post('/add', (req, res) =>{
-    const { id, name, color, price } = req.body
-    const currentData = readFile()
-    currentData.push({ id, name, color, price })
-    writeFile(currentData)
-    res.send({ id, name, color, price })      
-})
-
-
-module.exports = routes
+module.exports = router

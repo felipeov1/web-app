@@ -45,8 +45,3 @@ routes.get('/product/name/:name', (req, res) =>{
 
 
 module.exports = routes
-
-
-
-
-
