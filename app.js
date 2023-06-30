@@ -6,9 +6,10 @@ app.use(express.json());
 
 const routes = require('./routes/get')
 const routes_1 = require('./routes/post')
+const routes_2 = require('./routes/put')
 
 
-app.use(routes, routes_1)
+app.use(routes, routes_1, routes_2);
 
 app.set('view engine', 'ejs');
 app.set('views', './views/pages');

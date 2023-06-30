@@ -1,11 +1,11 @@
 const express = require('express');
 const fs = require('fs');
+const bodyparser = require('body-parser')
 
 const routes = express.Router();
 
-// const data = require('./db/products.json')
+routes.use(bodyparser.urlencoded({extended:true}))
 
-const data = fs.readFileSync('./routes/db/products.json', 'utf-8');
 
 const readFile = () =>{
     const data = fs.readFileSync('./routes/db/products.json', 'utf-8');
@@ -18,11 +18,11 @@ routes.get('/home', (req, res) =>{
 
 routes.get('/product', (req, res) =>{
     const data = readFile()
-   // res.render('product', {data})
-   res.send(data)
+    res.render('product', {data})
 })
 
 routes.get('/product/id/:id', (req, res) =>{
+    const data = readFile()
     const idProduct = req.params.id;
     for(let i = 0; i < data.length; i++){
     if(data[i].id == idProduct ){
@@ -33,6 +33,7 @@ routes.get('/product/id/:id', (req, res) =>{
 })
 
 routes.get('/product/name/:name', (req, res) =>{
+    const data = readFile()
     const nameProduct = req.params.name;
     for(let i = 0; i < data.length; i++){
         if(data[i].name == nameProduct){
@@ -41,7 +42,6 @@ routes.get('/product/name/:name', (req, res) =>{
         }
     }
 })
-
 
 
 module.exports = routes

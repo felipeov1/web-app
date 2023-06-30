@@ -13,6 +13,8 @@
         <td width="200" aling="center">NAME</td>
         <td width="200" aling="center">COLOR</td>
         <td width="200" aling="center">PRICE</td>
+        <td width="200" aling="center">EDIT</td>
+        <td width="200" aling="center">DELETE</td>
 
     </tr>
     <% for(let i = 0; i < data.length; i++) { %>
@@ -21,7 +23,8 @@
         <td width="200"><%= data[i].name %></td>
         <td width="200"><%= data[i].color %></td>
         <td width="200"><%= data[i].price %></td>
-    </tr>
+        <td width="200"><a href="/edit/<%= data[i].id %>">edit</a></td>
+        <td width="200"><a href="/delete/<%= data[i].id %>">delete</a></td>
     <% } %>
     </table>
 </body>
